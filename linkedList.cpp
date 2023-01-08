@@ -350,14 +350,14 @@ Node * p1 = head1;
 Node * p2 = head2;
 while(p1 != p2){
     if(p1 == NULL){
-        p1= p2;
+        p1= head2;
     }
     else 
     {
         p1 = p1->next;
     }
     if(p2 == NULL){
-        p2= p1;
+        p2= head1;
     }
     else 
     {
