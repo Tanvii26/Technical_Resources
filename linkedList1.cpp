@@ -292,7 +292,7 @@ Node *foldList(Node *head)
     Node *p1 = head;
     Node *p2 = middle(head);
 
-    Node *rev = reverse(p2);
+    p2 = reverse(p2);
     Node *ans = new Node();
     Node *p = ans;
     while (p1 || p2)
@@ -310,7 +310,7 @@ Node *foldList(Node *head)
             p2 = p2->next;
         }
     }
-    return head->next;
+    return p->next;
 }
 
 Node *addTwo(Node *head1, Node *head2)
@@ -328,7 +328,7 @@ Node *addTwo(Node *head1, Node *head2)
         }
         if (second)
         {
-            val += first->data + carry;
+            val += second->data + carry;
         }
         carry = val / 10;
         val = val % 10;
@@ -350,14 +350,14 @@ Node * p1 = head1;
 Node * p2 = head2;
 while(p1 != p2){
     if(p1 == NULL){
-        p1= p2;
+        p1= head2;
     }
     else 
     {
         p1 = p1->next;
     }
     if(p2 == NULL){
-        p2= p1;
+        p2= head1;
     }
     else 
     {
