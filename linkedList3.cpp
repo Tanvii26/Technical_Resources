@@ -27,15 +27,15 @@ public:
 int position(Node *head, int val)
 {
     Node *c = head;
-    int pos = 0;
+    int pos = 1;
     while (c)
     {
-        pos++;
         if(c->data == val)
-        return (pos++);
+        return (pos);
+        pos++;
         c = c->next;
     }
-    return pos;
+    return 0;
 }
 void insert_begin(Node *&head, int val)
 {
