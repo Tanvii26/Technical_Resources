@@ -153,4 +153,5 @@ int main()
     print(head);
     delValue(head, 3);
     print(head);
+    printReverse(head);
 }
