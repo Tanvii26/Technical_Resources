@@ -119,7 +119,19 @@ void print(Node *&head)
     }
     cout << endl;
 }
+void delBefore(Node* head, int val){
+    int pos = position(head, val);
+    del(head,pos-1);
+}
+void delAfter(Node* head, int val){
+    int pos = position(head, val);
+    del(head,pos+1);
+}
 
+void delValue(Node* head, int val){
+    int pos = position(head, val);
+    del(head, pos);
+}
 void printReverse(Node *head)
 {
     if (head == NULL)
@@ -129,10 +141,6 @@ void printReverse(Node *head)
 }
 
 
-void delValue(Node* head, int val){
-    int pos = position(head, val);
-    del(head, pos);
-}
 int main()
 {
     Node *node1 = new Node(26);
