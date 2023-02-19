@@ -140,7 +140,6 @@ void printReverse(Node *head)
     cout << head->data << " ";
 }
 
-
 int main()
 {
     Node *node1 = new Node(26);
