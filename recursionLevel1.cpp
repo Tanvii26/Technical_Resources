@@ -497,9 +497,8 @@ int main()
 
     vector<vector<int>> chess(5,vector<int>(5,0));
     nQueens(chess,0,"");
-    
-    knightsTour(chess,2,3,0);
 
+    knightsTour(chess,2,3,0);
     */
     return 0;
 }
